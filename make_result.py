@@ -266,5 +266,5 @@ if __name__ == '__main__':
     print("train data shape", train_data.__len__())
     for i in range(1500):
         ans = testing(model, train_data[i], 'cuda')
-        json.dump(ans, codecs.open(f'output{i}.json', 'w', encoding='utf-8'), separators=(',',':'), sort_keys=True, indent=4)
+        json.dump(ans, codecs.open(f'./json/output{i}.json', 'w', encoding='utf-8'), separators=(',',':'), sort_keys=True, indent=4)
     #np.savetxt('output.txt', np.array(ans), delimiter=',', fmt="%f")
